@@ -1,10 +1,13 @@
-
-
 import os
 os.system('clear')
 #2. initialize vars and/or cons
-num1 = 10
-num2 = 3
+#print("please Enter number 1: ")
+num1 = float(input("please Enter a number 1: "))
+#print(type(num1))
+
+#print("please Enter number 2: ")
+num2 = float(input("please Enter a number 2: "))
+#print(type(num2))
 
 
 #3. Processses
@@ -18,4 +21,3 @@ print("Addition: ", add, type(add))
 print("Subtraction: ", subs, type(subs))
 print("Multiplication: ", mult, type(mult))
 print("Divison: ", div, type(div))
-

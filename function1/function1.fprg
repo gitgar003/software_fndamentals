@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="function1"/>
+        <attribute name="authors" value="Jeferson Garcia"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-09 09:58:56 a.&#8239;m."/>
+        <attribute name="created" value="SmVmZXJzb24gR2FyY2lhO0xBUFRPUC1WQ1NGNlNQNjsyMDI1LTExLTA5OzA4OjE3OjQ3IGEu4oCvbS47MTIyMDA="/>
+        <attribute name="edited" value="SmVmZXJzb24gR2FyY2lhO0xBUFRPUC1WQ1NGNlNQNjsyMDI1LTExLTA5OzA5OjU4OjU2IGEu4oCvbS47MTsxMjMxNA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <call expression="showMessage()"/>
+        </body>
+    </function>
+    <function name="showMessage" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;hello, this is my first funtion. this is mazing&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
