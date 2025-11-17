@@ -1,4 +1,0 @@
-public static 
-void showMessage() {
-    System.out.println("hello, this is my first function");
-}
