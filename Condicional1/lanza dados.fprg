@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="lanza dados"/>
+        <attribute name="authors" value="Jeferson Garcia"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-17 08:58:47 p.&#8239;m."/>
+        <attribute name="created" value="SmVmZXJzb24gR2FyY2lhO0xBUFRPUC1WQ1NGNlNQNjsyMDI1LTExLTE3OzA3OjA2OjE0IHAu4oCvbS47MTIyMDU="/>
+        <attribute name="edited" value="SmVmZXJzb24gR2FyY2lhO0xBUFRPUC1WQ1NGNlNQNjsyMDI1LTExLTE3OzA4OjU4OjQ3IHAu4oCvbS47NDsxMjMzMA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="si" type="String" array="False" size=""/>
+            <declare name="num2" type="Integer" array="False" size=""/>
+            <declare name="num1" type="Integer" array="False" size=""/>
+            <output expression="&quot;Precione ENTER para lanzar los dados&quot;" newline="True"/>
+            <input variable="si"/>
+            <assign variable="num1" expression="Random(6) + 1"/>
+            <assign variable="num2" expression="Random(6)+1"/>
+            <output expression="&quot;numero &quot; &amp; num1" newline="True"/>
+            <if expression="num1%2=0">
+                <then>
+                    <output expression="&quot;Par&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Impar&quot;" newline="True"/>
+                </else>
+            </if>
+            <output expression="&quot;numero &quot; &amp; num2" newline="True"/>
+            <if expression="num2%2=0">
+                <then>
+                    <output expression="&quot;Par&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Impar&quot;" newline="True"/>
+                </else>
+            </if>
+            <if expression="num1=num2">
+                <then>
+                    <output expression="&quot;YOU WIN&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;GAME OVER&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
