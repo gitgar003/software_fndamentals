@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="reto_condicionales"/>
+        <attribute name="authors" value="Jeferson Garcia"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-17 10:58:43 p.&#8239;m."/>
+        <attribute name="created" value="SmVmZXJzb24gR2FyY2lhO0xBUFRPUC1WQ1NGNlNQNjsyMDI1LTExLTE1OzExOjM4OjU2IGEu4oCvbS47MTIxOTQ="/>
+        <attribute name="edited" value="SmVmZXJzb24gR2FyY2lhO0xBUFRPUC1WQ1NGNlNQNjsyMDI1LTExLTE3OzEwOjU4OjQzIHAu4oCvbS47NDsxMjMxOQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="declaramos const y varia"/>
+            <declare name="num1" type="Real" array="False" size=""/>
+            <declare name="num2" type="Real" array="False" size=""/>
+            <declare name="res" type="Real" array="False" size=""/>
+            <declare name="opt" type="Integer" array="False" size=""/>
+            <comment text="inicializamos "/>
+            <assign variable="num1" expression="0"/>
+            <assign variable="num2" expression="0"/>
+            <comment text="get number 1"/>
+            <output expression="&quot;enter value to number 1: &quot;" newline="True"/>
+            <input variable="num1"/>
+            <comment text="get number 2"/>
+            <output expression="&quot;enter value to number 2: &quot;" newline="True"/>
+            <input variable="num2"/>
+            <output expression="&quot;Math menu: [1]. Add - [2]. Subs - [3]. Mult - [4]. Div - [5]. All&quot;" newline="True"/>
+            <output expression="&quot;press any option [1,5]&quot;" newline="True"/>
+            <input variable="opt"/>
+            <if expression="opt=1">
+                <then>
+                    <assign variable="res" expression="num1+num2"/>
+                    <output expression="&quot;suma: &quot; &amp; res" newline="True"/>
+                </then>
+                <else>
+                    <if expression="opt=2">
+                        <then>
+                            <assign variable="res" expression="num1-num2"/>
+                            <output expression="&quot;resta: &quot; &amp; res" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="opt=3">
+                                <then>
+                                    <assign variable="res" expression="num1*num2"/>
+                                    <output expression="&quot;multiplicacion: &quot; &amp; res" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="opt=4">
+                                        <then>
+                                            <if expression="num2=0">
+                                                <then>
+                                                    <output expression="&quot;no es posible dividir entre cero&quot;" newline="True"/>
+                                                </then>
+                                                <else>
+                                                    <output expression="&quot;division: &quot; &amp; num1/num2" newline="True"/>
+                                                </else>
+                                            </if>
+                                        </then>
+                                        <else>
+                                            <if expression="opt=5">
+                                                <then>
+                                                    <output expression="&quot;suma: &quot; &amp; num1+num2" newline="True"/>
+                                                    <output expression="&quot;resta: &quot; &amp; num1-num2" newline="True"/>
+                                                    <output expression="&quot;multiplicacion: &quot; &amp; num1*num2" newline="True"/>
+                                                    <if expression="num2=0">
+                                                        <then>
+                                                            <output expression="&quot;no esposible dividir entre cero&quot;" newline="True"/>
+                                                        </then>
+                                                        <else>
+                                                            <output expression="&quot;division: &quot; &amp; num1/num2" newline="True"/>
+                                                        </else>
+                                                    </if>
+                                                </then>
+                                                <else>
+                                                    <output expression="&quot;invalid option&quot;" newline="True"/>
+                                                    <breakpoint expression="" always="True"/>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
