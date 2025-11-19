@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="salario"/>
+        <attribute name="authors" value="Jeferson Garcia"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-18 12:36:32 a.&#8239;m."/>
+        <attribute name="created" value="SmVmZXJzb24gR2FyY2lhO0xBUFRPUC1WQ1NGNlNQNjsyMDI1LTExLTE3OzExOjI5OjQ0IHAu4oCvbS47MTIyMDg="/>
+        <attribute name="edited" value="SmVmZXJzb24gR2FyY2lhO0xBUFRPUC1WQ1NGNlNQNjsyMDI1LTExLTE4OzEyOjM2OjMyIGEu4oCvbS47MjsxMjI5OQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="identificacion" type="String" array="False" size=""/>
+            <declare name="nombre" type="String" array="False" size=""/>
+            <declare name="genero" type="String" array="False" size=""/>
+            <declare name="a&#241;onac" type="Integer" array="False" size=""/>
+            <declare name="direccion" type="String" array="False" size=""/>
+            <declare name="telefono" type="String" array="False" size=""/>
+            <declare name="salario" type="Real" array="False" size=""/>
+            <declare name="aumento" type="Real" array="False" size=""/>
+            <output expression="&quot;por favor ingrse su tipo de identificacion (CC, PS, CE, CI)&quot;" newline="True"/>
+            <input variable="identificacion"/>
+            <output expression="&quot;ingrese sus nombres y apellidos&quot;" newline="True"/>
+            <input variable="nombre"/>
+            <output expression="&quot;ingrese su genero(masculino o femenino)&quot;" newline="True"/>
+            <input variable="genero"/>
+            <output expression="&quot;ingrese su a&#241;o de nacimiento (AAAA)&quot;" newline="True"/>
+            <input variable="a&#241;onac"/>
+            <output expression="&quot;cual es su direccion&quot;" newline="True"/>
+            <input variable="direccion"/>
+            <output expression="&quot;digite su numero de telefono&quot;" newline="True"/>
+            <input variable="telefono"/>
+            <output expression="&quot;cual es su salario mensual&quot;" newline="True"/>
+            <input variable="salario"/>
+            <output expression="&quot;el sueldo es de &quot;" newline="True"/>
+            <if expression="salario&lt;=1200000">
+                <then>
+                    <if expression="genero=&quot;femenino&quot;">
+                        <then>
+                            <assign variable="aumento" expression="salario + 120000"/>
+                            <output expression="&quot;salrio total: &quot; &amp; aumento" newline="True"/>
+                        </then>
+                        <else>
+                            <assign variable="aumento" expression="salario + 96000"/>
+                            <output expression="&quot;salrio total: &quot; &amp; aumento" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="salario&lt;2000000">
+                        <then>
+                            <assign variable="aumento" expression="salario+60000"/>
+                            <output expression="&quot;salrio total: &quot; &amp; aumento" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="genero=&quot;masculino&quot;">
+                                <then>
+                                    <assign variable="aumento" expression="salario+30000"/>
+                                    <output expression="&quot;salrio total: &quot; &amp; aumento" newline="True"/>
+                                </then>
+                                <else>
+                                    <assign variable="aumento" expression="salario+36000"/>
+                                    <output expression="&quot;salrio total: &quot; &amp; aumento" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;el usuario: &quot; &amp; nombre" newline="True"/>
+            <output expression="&quot;tipo de identidad&quot; &amp; identificacion" newline="True"/>
+            <output expression="&quot;residencia &quot; &amp; direccion&amp; &quot; &quot; &amp; telefono" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
