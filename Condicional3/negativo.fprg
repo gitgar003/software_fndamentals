@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="negativo"/>
+        <attribute name="authors" value="Jeferson Garcia"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-17 09:47:30 p.&#8239;m."/>
+        <attribute name="created" value="SmVmZXJzb24gR2FyY2lhO0xBUFRPUC1WQ1NGNlNQNjsyMDI1LTExLTE3OzA5OjIyOjM5IHAu4oCvbS47MTIyMTI="/>
+        <attribute name="edited" value="SmVmZXJzb24gR2FyY2lhO0xBUFRPUC1WQ1NGNlNQNjsyMDI1LTExLTE3OzA5OjQ3OjMwIHAu4oCvbS47MTsxMjMxOA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num" type="Integer" array="False" size=""/>
+            <declare name="loo" type="Integer" array="False" size=""/>
+            <output expression="&quot;Ingrse un numero positivo o negativo&quot;" newline="True"/>
+            <input variable="num"/>
+            <if expression="num&gt;0">
+                <then>
+                    <output expression="&quot;El numero es Positivo&quot;" newline="True"/>
+                    <if expression="num%2=0">
+                        <then>
+                            <output expression="&quot;El numero es par&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;el numero es impar&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;El numero es negativo&quot;" newline="True"/>
+                    <assign variable="loo" expression="num-num-num"/>
+                    <if expression="loo%2=0">
+                        <then>
+                            <output expression="&quot;El numero es par&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;el numero es impar&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
