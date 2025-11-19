@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="pide numero"/>
+        <attribute name="authors" value="Jeferson Garcia"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-17 09:15:04 p.&#8239;m."/>
+        <attribute name="created" value="SmVmZXJzb24gR2FyY2lhO0xBUFRPUC1WQ1NGNlNQNjsyMDI1LTExLTE3OzA5OjA0OjExIHAu4oCvbS47MTIyMDI="/>
+        <attribute name="edited" value="SmVmZXJzb24gR2FyY2lhO0xBUFRPUC1WQ1NGNlNQNjsyMDI1LTExLTE3OzA5OjE1OjA0IHAu4oCvbS47MTsxMjMxNA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num" type="Integer" array="False" size=""/>
+            <output expression="&quot;Ingrese un numero&quot;" newline="True"/>
+            <input variable="num"/>
+            <if expression="num%2=0">
+                <then>
+                    <output expression="&quot;el numero es par&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;el numero es imapar&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
