@@ -16,3 +16,4 @@ print("cant. de veces que desea lanzar el dado")
 dado = int(input())
 print("==============================")
 bucl(dado)
+##solucion
