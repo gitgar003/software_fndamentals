@@ -18,3 +18,4 @@ eNTER = input()
 num = int(random.randint(1,6))
 print("el numero es: " + str(num))
 definir = define(num)
+##solucion
