@@ -23,3 +23,4 @@ print("el total de numeros 3 fue de: " + str(three))
 print("el total de numeros 4 fue de: " + str(four))
 print("el total de numeros 5 fue de: " + str(five))
 print("el total de numeros 6 fue de: " + str(six))
+##solucion
