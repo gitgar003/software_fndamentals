@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="reto2"/>
+        <attribute name="authors" value="Jeferson Garcia"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-19 10:43:26 p.&#8239;m."/>
+        <attribute name="created" value="SmVmZXJzb24gR2FyY2lhO0xBUFRPUC1WQ1NGNlNQNjsyMDI1LTExLTE5OzEwOjA1OjAxIHAu4oCvbS47MTIxOTY="/>
+        <attribute name="edited" value="SmVmZXJzb24gR2FyY2lhO0xBUFRPUC1WQ1NGNlNQNjsyMDI1LTExLTE5OzEwOjQzOjI2IHAu4oCvbS47MTsxMjMxMw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="dado" type="Integer" array="False" size=""/>
+            <declare name="valor" type="Integer" array="False" size=""/>
+            <output expression="&quot;cant. de veces que desea lanzar el dado&quot;" newline="True"/>
+            <input variable="dado"/>
+            <assign variable="valor" expression="bucl(dado)"/>
+        </body>
+    </function>
+    <function name="bucl" type="Integer" variable="stop">
+        <parameters>
+            <parameter name="para" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="pppp" type="Integer" array="False" size=""/>
+            <assign variable="pppp" expression="0"/>
+            <declare name="suma" type="Integer" array="False" size=""/>
+            <assign variable="suma" expression="0"/>
+            <declare name="cantiros" type="Integer" array="False" size=""/>
+            <assign variable="cantiros" expression="0"/>
+            <declare name="stop" type="Integer" array="False" size=""/>
+            <for variable="pppp" start="1" end="para" direction="inc" step="1">
+                <assign variable="stop" expression="Random(6)+1"/>
+                <output expression="stop" newline="True"/>
+                <assign variable="suma" expression="stop+suma"/>
+            </for>
+            <output expression="&quot;valor total: &quot; &amp; suma" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

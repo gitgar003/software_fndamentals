@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="reto1"/>
+        <attribute name="authors" value="Jeferson Garcia"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-19 09:48:21 p.&#8239;m."/>
+        <attribute name="created" value="SmVmZXJzb24gR2FyY2lhO0xBUFRPUC1WQ1NGNlNQNjsyMDI1LTExLTE5OzA3OjA0OjMwIHAu4oCvbS47MTIyMDM="/>
+        <attribute name="edited" value="SmVmZXJzb24gR2FyY2lhO0xBUFRPUC1WQ1NGNlNQNjsyMDI1LTExLTE5OzA3OjMzOjIzIHAu4oCvbS47MTtKZWZlcnNvbiBHYXJjaWE7TEFQVE9QLVZDU0Y2U1A2OzIwMjUtMTEtMTc7MDk6MDQ6MTEgcC7igK9tLjtwaWRlIG51bWVyby5mcHJnOzI2MjI0"/>
+        <attribute name="edited" value="SmVmZXJzb24gR2FyY2lhO0xBUFRPUC1WQ1NGNlNQNjsyMDI1LTExLTE5OzA5OjQ4OjIxIHAu4oCvbS47MjsxMjMyMg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nnn" type="Integer" array="False" size=""/>
+            <declare name="definir" type="Integer" array="False" size=""/>
+            <declare name="ENTER" type="String" array="False" size=""/>
+            <declare name="num" type="Integer" array="False" size=""/>
+            <output expression="&quot;Precione ENTER para lanzar el dado&quot;" newline="True"/>
+            <input variable="ENTER"/>
+            <assign variable="num" expression="Random(6)+1"/>
+            <output expression="num" newline="True"/>
+            <assign variable="definir" expression="define(num)"/>
+        </body>
+    </function>
+    <function name="define" type="Integer" variable="nnn">
+        <parameters>
+            <parameter name="parOimpar" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="nnn" type="Integer" array="False" size=""/>
+            <assign variable="nnn" expression="parOimpar%2"/>
+            <if expression="nnn=0">
+                <then>
+                    <output expression="&quot;el numero es par&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;el numero es impar&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

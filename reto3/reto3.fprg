@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="reto3"/>
+        <attribute name="authors" value="Jeferson Garcia"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-22 09:59:12 p.&#8239;m."/>
+        <attribute name="created" value="SmVmZXJzb24gR2FyY2lhO0xBUFRPUC1WQ1NGNlNQNjsyMDI1LTExLTIyOzA4OjAyOjU4IHAu4oCvbS47MTIyMDY="/>
+        <attribute name="edited" value="SmVmZXJzb24gR2FyY2lhO0xBUFRPUC1WQ1NGNlNQNjsyMDI1LTExLTIyOzA5OjU5OjEyIHAu4oCvbS47MTsxMjMxNw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="one" type="Integer" array="False" size=""/>
+            <assign variable="one" expression="0"/>
+            <declare name="two" type="Integer" array="False" size=""/>
+            <assign variable="two" expression="0"/>
+            <declare name="three" type="Integer" array="False" size=""/>
+            <assign variable="three" expression="0"/>
+            <declare name="four" type="Integer" array="False" size=""/>
+            <assign variable="four" expression="0"/>
+            <declare name="five" type="Integer" array="False" size=""/>
+            <assign variable="five" expression="0"/>
+            <declare name="six" type="Integer" array="False" size=""/>
+            <assign variable="six" expression="0"/>
+            <declare name="valor" type="Integer" array="False" size=""/>
+            <assign variable="valor" expression="0"/>
+            <declare name="enter" type="Integer" array="False" size=""/>
+            <declare name="bucl" type="Integer" array="False" size=""/>
+            <declare name="numAle" type="Integer" array="False" size=""/>
+            <output expression="&quot;ingrese la cantidad de veces que desea lanzar los dados&quot;" newline="True"/>
+            <input variable="enter"/>
+            <for variable="bucl" start="1" end="enter" direction="inc" step="1">
+                <assign variable="numAle" expression="lanzaDado()"/>
+                <output expression="numAle" newline="True"/>
+                <if expression="numAle=1">
+                    <then>
+                        <assign variable="one" expression="one+1"/>
+                    </then>
+                    <else>
+                        <if expression="numAle=2">
+                            <then>
+                                <assign variable="two" expression="two+1"/>
+                            </then>
+                            <else>
+                                <if expression="numALe=3">
+                                    <then>
+                                        <assign variable="three" expression="three+1"/>
+                                    </then>
+                                    <else>
+                                        <if expression="numAle=4">
+                                            <then>
+                                                <assign variable="four" expression="four+1"/>
+                                            </then>
+                                            <else>
+                                                <if expression="numAle=5">
+                                                    <then>
+                                                        <assign variable="five" expression="five+1"/>
+                                                    </then>
+                                                    <else>
+                                                        <assign variable="six" expression="six+1"/>
+                                                    </else>
+                                                </if>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </for>
+            <output expression="&quot;el total de numeros 1 fue de: &quot; &amp; one" newline="True"/>
+            <output expression="&quot;el total de numeros 2 fue de: &quot; &amp; two" newline="True"/>
+            <output expression="&quot;el total de numeros 3 fue de: &quot; &amp; three" newline="True"/>
+            <output expression="&quot;el total de numeros 4 fue de: &quot; &amp; four" newline="True"/>
+            <output expression="&quot;el total de numeros 5 fue de: &quot; &amp; five" newline="True"/>
+            <output expression="&quot;el total de numeros 6 fue de: &quot; &amp; six" newline="True"/>
+        </body>
+    </function>
+    <function name="lanzaDado" type="Integer" variable="num">
+        <parameters/>
+        <body>
+            <declare name="num" type="Integer" array="False" size=""/>
+            <assign variable="num" expression="Random(6)+1"/>
+        </body>
+    </function>
+</flowgorithm>
