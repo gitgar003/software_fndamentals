@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="reto6"/>
+        <attribute name="authors" value="Jeferson Garcia"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-24 07:55:36 p.&#8239;m."/>
+        <attribute name="created" value="SmVmZXJzb24gR2FyY2lhO0xBUFRPUC1WQ1NGNlNQNjsyMDI1LTExLTI0OzA3OjE3OjEyIHAu4oCvbS47MTIyMDM="/>
+        <attribute name="edited" value="SmVmZXJzb24gR2FyY2lhO0xBUFRPUC1WQ1NGNlNQNjsyMDI1LTExLTI0OzA3OjQxOjEwIHAu4oCvbS47MjtKZWZlcnNvbiBHYXJjaWE7TEFQVE9QLVZDU0Y2U1A2OzIwMjUtMTEtMjQ7MDY6NDM6NDAgcC7igK9tLjtyZXRvNS5mcHJnOzI1NTk5"/>
+        <attribute name="edited" value="SmVmZXJzb24gR2FyY2lhO0xBUFRPUC1WQ1NGNlNQNjsyMDI1LTExLTI0OzA3OjU1OjM2IHAu4oCvbS47MTsxMjMxOQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="valor" type="Integer" array="False" size=""/>
+            <declare name="rspuesta" type="String" array="False" size=""/>
+            <declare name="dice1" type="Integer" array="False" size=""/>
+            <declare name="dice2" type="Integer" array="False" size=""/>
+            <declare name="dado" type="String" array="False" size=""/>
+            <declare name="contador1" type="Integer" array="False" size=""/>
+            <declare name="contador2" type="Integer" array="False" size=""/>
+            <declare name="contador3" type="Integer" array="False" size=""/>
+            <declare name="suma" type="Integer" array="False" size=""/>
+            <assign variable="suma" expression="0"/>
+            <assign variable="contador3" expression="0"/>
+            <assign variable="valor" expression="0"/>
+            <assign variable="contador1" expression="0"/>
+            <assign variable="contador2" expression="0"/>
+            <output expression="&quot;====BIENVENIDOS A MI JUEGO DE DADOS====&quot;" newline="True"/>
+            <output expression="&quot;PRECIONA ENTER PARA LANZAR LOS DADOS&quot;" newline="True"/>
+            <input variable="dado"/>
+            <do expression="rspuesta=&quot;s&quot;">
+                <assign variable="contador3" expression="contador3+1"/>
+                <assign variable="dice1" expression="cont()"/>
+                <assign variable="dice2" expression="cont()"/>
+                <assign variable="suma" expression="suma+dice1+dice2"/>
+                <output expression="&quot;valor: &quot; &amp; dice1" newline="True"/>
+                <output expression="&quot;valor: &quot; &amp; dice2" newline="True"/>
+                <if expression="dice1-dice2=0">
+                    <then>
+                        <assign variable="contador1" expression="contador1+1"/>
+                    </then>
+                    <else>
+                        <assign variable="contador2" expression="contador2+1"/>
+                    </else>
+                </if>
+                <output expression="&quot;quieres volver a jugar (s/n)&quot;" newline="True"/>
+                <input variable="rspuesta"/>
+            </do>
+            <output expression="&quot;Total de tiros: &quot;&amp; contador3" newline="True"/>
+            <output expression="&quot;Suma total: &quot;&amp; suma" newline="True"/>
+            <output expression="&quot;Sacaste: &quot; &amp; contador1 &amp; &quot;pares&quot;" newline="True"/>
+            <output expression="&quot;Sacaste: &quot; &amp; contador2 &amp; &quot;impares&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="cont" type="Integer" variable="dice1">
+        <parameters/>
+        <body>
+            <declare name="dice1" type="Integer" array="False" size=""/>
+            <assign variable="dice1" expression="0"/>
+            <assign variable="dice1" expression="Random(6)+1"/>
+        </body>
+    </function>
+</flowgorithm>
